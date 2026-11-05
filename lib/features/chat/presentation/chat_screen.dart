@@ -18,6 +18,7 @@ class _ChatScreenState extends State<ChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
   bool _isMutualRevealed = false;
+  bool _hasRequestedReveal = false;
 
   late List<ChatMessage> _messages;
 
@@ -95,6 +96,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   void _handleRevealRequest() {
     setState(() {
+      _hasRequestedReveal = true;
       _isMutualRevealed = true; // Auto-reciprocated for demo
     });
 

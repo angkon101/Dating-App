@@ -29,6 +29,7 @@ class _ProfileCardState extends State<ProfileCard> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
+    final size = MediaQuery.of(context).size;
     final photos = widget.profile.avatarUrls.isNotEmpty
         ? widget.profile.avatarUrls
         : ['https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'];
